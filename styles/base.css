@@ -1,134 +1,209 @@
-/* base.css */
-
-/* General reset and body styling */
-body {
-    font-family: 'Arial, sans-serif'; /* Example font, replace with your chosen Google Font */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4; /* Light background color for contrast */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+}
+
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #555;
+	background-color: #0d2c70d8;
+    color: #fff;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 main {
-    max-width: 800px;
-    padding: 2em;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 2em;
-    border-radius: 8px;
+	margin: 0 auto;
 }
 
-.card1 {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1.5em;
-    margin: 1em 0;
+h1 {
+    font-size: 1.5rem;
+	font-weight: 100;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+nav {
+	background-color: #000000;
+	margin: 0 auto;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+    color: #f6f6ee;
+    padding: 15px;
+}
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2.6fr 1.4fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #d3d2d2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.card h2 {
     text-align: center;
 }
-
-/* Profile picture styling */
-.profile-pic {
-    width: 150px; /* Set a specific width */
-    height: 150px; /* Set a specific height */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    margin: 0 auto 1em; /* Centers the image horizontally and adds bottom margin */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.card ul {
+    list-style: none;
+    padding: 5;
 }
-
-/* Flag picture styling */
-.flag-pic {
-    width: 200px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 1em auto; /* Centers the image horizontally and adds top margin */
-    display: block;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px; /* Slightly rounded corners */
+.card ul li {
+    margin: 15px;
 }
-
-.card1 ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 1em;
-}
-
-.card1 ul li {
-    margin: 0.5em 0;
-}
-
-.card1 ul li a {
+.card ul li a {
     text-decoration: none;
     color: #007BFF;
-    display: flex; /* Align icon and text horizontally */
-    align-items: center; /* Center vertically */
-    gap: 0.5em; /* Space between icon and text */
-    transition: color 0.3s;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-
-.card1 ul li a:hover {
+.card ul li a:hover {
     color: #0056b3;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+.card ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #007BFF;
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+}
+.card ul li a:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+    transform-origin: bottom left;
 }
 
-.icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor; /* Makes the SVG inherit the text color */
-    margin-right: 5px; /* Adjust spacing between icon and text */
+
+.aright {
+    float: right;
+    width: 210px;
+    height: auto;
+    padding: 15px;
 }
+
+.aleft {
+    float: left;
+    width: 230px;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.aleft img {
+    display: block;
+    margin: 0 auto;
+}
+
+.aleft figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.aleft + p {
+    margin-left: 230px;
+}
+
+
+
+section h2 {
+    font-size: 1.2rem;
+    background-color:#0d2c70d8;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: #111622;
+    text-align: center;
+    padding-top: 10px;
+}
+
+section hr {
+    border: none;
+    width:80%;
+    height: 1.3px;
+    background-color: #0d2c70d8;
+    margin: 10px 60px;
+    margin-top: 5px;
+}
+
+section p {
+    padding: 20px;
+    margin: 10px;
+    color: #061a46;
+}
+
+section ul {
+    margin-left: 40px;
+    margin-top: 60%;
+}
+
+
+section a {
+    color: #061a46;
+	padding: 1.2rem;
+	text-decoration: none;
+}
+
+
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    width: 100%;
+    background-color: #0d2c70d8;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    position: relative; /* Changed from fixed to relative */
 }
 
-@media (max-width: 600px) {
-    main {
-        margin: 1em;
-        padding: 1em;
-    }
-    .card1 {
-        padding: 1em;
-    }
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-    .flag-pic {
-        width: 150px;
-    }
-}
+
+
+
+
+
