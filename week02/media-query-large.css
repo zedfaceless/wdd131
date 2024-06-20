@@ -1,0 +1,17 @@
+@media screen and (min-width: 500px) {
+    /* Styles for viewport width of 500px or greater */
+  
+    /* Change header styles */
+    header {
+      background-color: #000000; /* Black background */
+      color: #ffffff; /* White text */
+    }
+  
+    /* Change main element styles */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Two columns of equal size */
+      gap: 1rem; /* Equal gap of 1rem */
+    }
+  }
+  
