@@ -113,9 +113,7 @@ footer {
     padding: 1em;
     width: 100%;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position: relative; /* Changed from fixed to relative */
 }
 
 @media (max-width: 600px) {
