@@ -84,7 +84,7 @@ main {
 }
 .card ul {
     list-style: none;
-    padding: 5;
+    padding: 5px;
 }
 .card ul li {
     margin: 15px;
