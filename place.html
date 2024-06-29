@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines WDD Assignment</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Philippines</h1>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/Island-large.webp">
+                <source media="(max-width: 799px)" srcset="images/Island-small.jpg">
+                <img src="images/Island-small.jpg" alt="Hero Image">
+            </picture>
+            <div class="hero-content">
+                <h1>Welcome to Philippines</h1>
+            </div>
+        </section>
+        <!-- Information Section -->
+        <section class="info">
+            <h2>Data</h2>
+            <ul>
+                <li>Area Size: <span id="area-size">300,000 square kilometers</span></li>
+                <li>Population: <span id="population">119,083,440</span></li>
+                <li>Capital: <span id="capital">Manila City</span></li>
+                <li>Languages: <span id="languages">Tagalog, Cebuano + 170 Dialects</span></li>
+                <li>Currency: <span id="currency">Philippines Peso</span></li>
+                <li>Time Zone: <span id="time-zone">Philippine Standard Time</span></li>
+                <li>Calling Code: <span id="calling-code">+63</span></li>
+                <li>Internet TLD: <span id="internet-tld">.ph</span></li>
+            </ul>
+        </section>
+        <!-- Additional Hero Image Section -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/Tarsier-large.webp">
+                <source media="(max-width: 799px)" srcset="images/Tarsier-small.jpg">
+                <img src="images/Tarsier-small.jpg" alt="Another Hero Image">
+            </picture>
+            <div class="hero-content">
+                <h1>Explore More</h1>
+            </div>
+        </section>
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather <span class="weather-icon"></span></h2>
+            <p>Temperature: <span id="temperature">26°C</span></p>
+            <p>Conditions: <span id="conditions">Rainy</span></p>
+            <p>Wind: <span id="wind-speed">10 mp/h</span></p>
+            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Zed Fernandez | Zambales Philippines</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
