@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #390364;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#menu {
+    display: inline-flex;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "✖";
+}
+
+nav {
+    display: none;
+    text-align: center;
+    background-color: #490080;
+    padding: 1rem;
+}
+
+nav.show {
+    display: block;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #390364;
+}
+
+main {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.main-title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #390364;
+}
+
+.temples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.temple-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.temple-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.temple-info {
+    padding: 1rem;
+    text-align: left;
+}
+
+.temple-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #390364;
+}
+
+.temple-info p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    padding: 1rem;
+    background-color: #390364;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#lastModified {
+    color: #FDFE4C;
+    font-size: 0.9rem;
+}

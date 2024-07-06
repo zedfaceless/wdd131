@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="WDD 131 - Temples Album - Melchizedek Fernandez - Home page">
+    <meta name="author" content="Zed Fernandez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <title>WDD 131 - Temples Album - Melchizedek Galvan Fernandez</title>
+</head>
+<body>
+    <header>
+        <h1 class="title-page">Temple Album</h1>
+        <a id="menu" href="#"></a>
+        <nav>
+            <a href="#" data-filter="all">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="main-title">Home</h2>
+        <div class="temples-grid" id="temples-grid">
+            <!-- Dynamic content will be generated here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Zed Fernandez | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
