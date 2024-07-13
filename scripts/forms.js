@@ -16,3 +16,29 @@ window.onload = function() {
         productNameSelect.add(option);
     });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('productReviewForm');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const feedback = {
+            productName: form.productName.value,
+            rating: form.rating.value,
+            installationDate: form.installationDate.value,
+            features: Array.from(form.features)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value),
+            reviewText: form.reviewText.value,
+            userName: form.userName.value
+        };
+
+        let feedbackList = JSON.parse(localStorage.getItem('feedbackList')) || [];
+        feedbackList.push(feedback);
+        localStorage.setItem('feedbackList', JSON.stringify(feedbackList));
+
+        // Redirect to review.html
+        window.location.href = form.action;
+    });
+});

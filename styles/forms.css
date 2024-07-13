@@ -61,6 +61,18 @@ input[type="submit"]:hover {
     color: gold;
 }
 
+.feedback-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.feedback-item p {
+    margin: 5px 0;
+}
+
 footer{
     padding: 10px;
     background-color: #75857b;
@@ -87,3 +99,4 @@ footer{
         padding: 8px 15px;
     }
 }
+
