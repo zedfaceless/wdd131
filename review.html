@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Thank you for your review!</h1>
+        <p>Reviews submitted: <span id="reviewCount"></span></p>
+    </div>
+
+    <footer>
+        <p id="currentYear"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        // Increment and display the review counter
+        if (localStorage.getItem('reviewCount')) {
+            let reviewCount = parseInt(localStorage.getItem('reviewCount'));
+            reviewCount += 1;
+            localStorage.setItem('reviewCount', reviewCount);
+        } else {
+            localStorage.setItem('reviewCount', 1);
+        }
+        document.getElementById('reviewCount').innerText = localStorage.getItem('reviewCount');
+
+        // Set current year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+
+        // Set last modified date
+        const lastModified = document.lastModified;
+        document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+    </script>
+</body>
+</html>
