@@ -3,36 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Website</title>
+    <title>Zed Shopping Website</title>
     <link rel="stylesheet" href="styles/shopping-site.css">
+    
+    <!-- Include FontAwesome for cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Simple Shop</h1>
+        <h1>Zed's Simple Shop</h1>
+        <button id="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+        </button>
     </header>
     <main>
+        <!-- Products -->
         <div class="product" data-id="1" data-price="19.99">
-            <h2>Product 1</h2>
+            <img src="images/Thumbler.webp" alt="Tumbler">
+            <h2>Tumbler</h2>
+            <p class="description">A high-quality tumbler for all your beverage needs.</p>
+            <p class="specs">Material: Stainless Steel<br>Capacity: 500ml</p>
             <p>Price: $19.99</p>
             <button onclick="addToCart(1)">Add to Cart</button>
         </div>
         <div class="product" data-id="2" data-price="29.99">
-            <h2>Product 2</h2>
+            <img src="images/Basket.webp" alt="Basket">
+            <h2>Basket</h2>
+            <p class="description">A versatile basket for all your storage needs.</p>
+            <p class="specs">Material: Plastic<br>Dimensions: 30x30x15cm</p>
             <p>Price: $29.99</p>
             <button onclick="addToCart(2)">Add to Cart</button>
         </div>
         <div class="product" data-id="3" data-price="39.99">
-            <h2>Product 3</h2>
+            <img src="images/bucket.webp" alt="Bucket">
+            <h2>Bucket</h2>
+            <p class="description">A durable bucket for various tasks.</p>
+            <p class="specs">Material: Plastic<br>Capacity: 10L</p>
             <p>Price: $39.99</p>
             <button onclick="addToCart(3)">Add to Cart</button>
         </div>
+        <div class="product" data-id="4" data-price="24.99">
+            <img src="images/jag.jpg" alt="Jag">
+            <h2>Jag</h2>
+            <p class="description">Elegant jag for your dining needs.</p>
+            <p class="specs">Material: Glass<br>Capacity: 1L</p>
+            <p>Price: $24.99</p>
+            <button onclick="addToCart(4)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="5" data-price="1.99">
+            <img src="images/bubblegum.jpg" alt="Bubble Gum">
+            <h2>Bubble Gum</h2>
+            <p class="description">Chewy and flavorful bubble gum.</p>
+            <p class="specs">Flavor: Mixed<br>Quantity: Pack of 10</p>
+            <p>Price: $1.99</p>
+            <button onclick="addToCart(5)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="6" data-price="2.99">
+            <img src="images/pencil.jpg" alt="Pencil">
+            <h2>Pencil</h2>
+            <p class="description">High-quality pencil for everyday use.</p>
+            <p class="specs">Material: Wood<br>Type: HB</p>
+            <p>Price: $2.99</p>
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="7" data-price="4.99">
+            <img src="images/ballpen.jpg" alt="Ball Pen">
+            <h2>Ball Pen</h2>
+            <p class="description">Smooth writing ball pen.</p>
+            <p class="specs">Ink Color: Blue<br>Type: Retractable</p>
+            <p>Price: $4.99</p>
+            <button onclick="addToCart(7)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="8" data-price="3.49">
+            <img src="images/envelop.jpg" alt="Envelop">
+            <h2>Envelop</h2>
+            <p class="description">Secure and durable envelope.</p>
+            <p class="specs">Size: A4<br>Pack of 50</p>
+            <p>Price: $3.49</p>
+            <button onclick="addToCart(8)">Add to Cart</button>
+        </div>
     </main>
-    <aside>
+    <aside id="cart">
         <h2>Cart</h2>
         <ul id="cart-items"></ul>
         <p>Total: $<span id="total-price">0.00</span></p>
         <button onclick="checkout()">Checkout</button>
     </aside>
-    <script src="styles/shopping-site.css"></script>
+    <div id="cart-notification">Item added to cart!</div>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Zed Fernandez | Philippines</p>
+    </footer>
+    <script src="scripts/shopping-site.js"></script>
 </body>
 </html>
